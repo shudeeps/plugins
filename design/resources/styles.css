@@ -1,0 +1,244 @@
+span,
+label
+{
+	font: inherit;
+	font-size: 100%;
+
+	vertical-align: baseline;
+
+	border: 0;
+}
+
+html,
+body {
+	font-family: Tahoma, Helvetica, sans-serif;
+}
+
+a {
+	text-decoration: underline;
+	color: #000;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+input[type='checkbox'] {
+	display: none;
+}
+
+
+
+.lk-row__custom,
+.lk-row__check_me .lk-row__check-icon,
+.lk-row__check_friends .lk-row__check-icon
+ {
+	background: transparent url('../img/sprite.png') no-repeat;
+}
+/*** lk-row ***/
+.lk-row__check {
+	display: inline-block;
+
+	cursor: pointer;
+
+	*display: inline;
+	*zoom: 1;
+}
+
+.lk-row__check:hover .lk-row__custom {
+	opacity: 1;
+}
+
+.lk-row__check_disabled:hover .lk-row__custom {
+    opacity: 0.5;
+}
+
+.lk-row__check:hover .lk-row__custom-tooltip {
+	top: -35px;
+
+	overflow: visible;
+
+	height: 21px;
+
+	opacity: 1;
+}
+
+.lk-row__custom {
+	position: relative;
+
+	display: inline-block;
+
+	width: 24px;
+	height: 24px;
+
+	background-position: -304px -112px;
+
+	opacity: .5;
+
+	-webkit-transition: opacity .25s ease;
+	        transition: opacity .25s ease;
+
+	*display: inline;
+	*zoom: 1;
+}
+
+:checked ~ .lk-row__custom {
+	background-position: -218px -112px;
+	opacity: 1;
+}
+
+.lk-row__custom-tooltip {
+	position: absolute;
+
+	top: 0;
+	left: 50%;
+
+	display: block;
+
+	overflow: hidden;
+
+	height: 0;
+
+	line-height: 21px;
+
+	text-align: center;
+	white-space: nowrap;
+	color: #1f2229;
+
+	background-color: #fff;
+
+	box-shadow: 0 1px 4px rgba(19, 13, 0, .15);
+
+	opacity: 0;
+
+	-webkit-transition: all .2s ease;
+	        transition: all .2s ease;
+}
+
+.lk-row__check_me .lk-row__custom-tooltip {
+	margin-left: -55px;
+
+	width: 110px;
+}
+
+.lk-row__check_friends .lk-row__custom-tooltip {
+	margin-left: -88px;
+
+	width: 125px;
+}
+
+.lk-row__custom-tooltip:before {
+	position: absolute;
+
+	top: 100%;
+	left: 50%;
+
+	margin-left: -10px;
+
+	display: block;
+
+	width: 0;
+	height: 0;
+
+	content: '';
+
+	border-width: 10px 10px 0 10px;
+	border-style: solid;
+	border-color: #fff transparent transparent transparent;
+}
+
+.lk-row__check-icon {
+	margin-right: 5px;
+
+	display: inline-block;
+
+	opacity: .5;
+
+	*display: inline;
+	*zoom: 1;
+}
+
+:checked ~ .lk-row__check-icon {
+	opacity: 1;
+}
+
+.lk-row__check:hover .lk-row__check-icon {
+	opacity: 1;
+}
+
+.lk-row__check_disabled:hover .lk-row__check-icon {
+    opacity: 0.5;
+}
+
+.lk-row__check_disabled {
+    cursor: default;
+}
+
+.lk-row__check_me .lk-row__check-icon {
+	width: 26px;
+	height: 25px;
+
+	background-position: -190px -112px;
+}
+
+.lk-row__check_friends .lk-row__check-icon {
+	width: 30px;
+	height: 24px;
+
+	background-position: -244px -112px;
+}
+
+
+.days-block {
+	margin-right: 7px;
+
+	display: inline-block;
+
+	vertical-align: middle;
+
+	*display: inline;
+	*zoom: 1;
+}
+
+.days-block__checkbox {
+	display: inline-block;
+
+	width: 41px;
+	height: 38px;
+        line-height: 36px;
+
+	cursor: pointer;
+
+	text-align: center;
+	vertical-align: top;
+
+	border: 1px solid #ccc;
+
+	*display: inline;
+	*zoom: 1;
+}
+
+.days-block__label {
+	font-size: 16px;
+
+	color: #1f2229;
+
+	opacity: .5;
+}
+
+:checked ~ .days-block__label {
+	opacity: 1;
+}
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+	.lk-row__custom,
+	.lk-row__check_me .lk-row__check-icon,
+	.lk-row__check_friends .lk-row__check-icon,
+	.lk-row__rules,
+	.lk-row__delete,
+	.lk-row__rating:before{
+		background-image: url('../img/sprite@2x.png');
+		background-size: 371px 214px;
+	}
+}
